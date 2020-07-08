@@ -7,46 +7,57 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
     <title>BikeShop - Home</title>
     </head>
     <body>
         
-        <div class="container-fluid">
+
 
             <!-- HEADER -->
-            <div class="row">
-
-                <nav class=" header col-12 navbar navbar-light bg-dark">
-                    <a class="navbar" href="/">
-                    <img src="/images/bike-logo.svg" width="50" height="50" class="logo" alt="">
-                    The Bike Shop Experience
-                    </a>
-                </nav>
-
-            </div>  
-
-            <!-- JUMBOTRON -->
-            <div class="row">
-
-                <div class="col-12 jumbotron jumbotron-fluid">
-                    <div class="container">
+                <nav>
+                    <div class="nav-wrapper">
+                      <a href="#!" class="brand-logo">  <img src="/images/bike-logo.svg" width="50" height="50" class="logo" alt="">  The Bike Shop Experience</a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="/shop"><i class=" material-icons right iconShop large">shopping_cart</i><%= nbProduit %> article</a></li>
+                      </ul>
                     </div>
+                  </nav>
+
+      
+            <!-- JUMBOTRON -->
+
+
+                <div class=" jumbotron jumbotron-fluid">
                 </div>
 
-            </div>
-
-            <div class="row">
+<div class="container-fluid">
+            <div class="row col-10">
                 <% 
                 for(var i=0;i<dataBike.length;i++){
                 %>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="card">
+                
+                    <div class="col-xs-12 col-sm-6 col-md-4 colproduit">
+                        <div class="card cardproduit">
+
                             <img src=<%= dataBike[i].url%> class="card-img-top">
+
                             <div class="card-body text-center">
-                                <h5 class="card-title"><%= dataBike[i].name%></h5>
-                                <%= dataBike[i].price%>€
-                                <a href="/shop?bikeNameFromFront=<%= dataBike[i].name%>&bikePriceFromFront=<%= dataBike[i].price%>&bikeImageFromFront=<%= dataBike[i].url%>" class="btn btn-outline-info btn-sm">Buy</a>
-                            </div>
+                                <p class="card-title cardName"><%= dataBike[i].name%></p>
+                                <div class="divider"></div>
+                                <p class="card-title cardPrice"><%= dataBike[i].price%>€</p>
+
+                                <div class="card-content cardbutton">
+                                
+                                    <a href="/shop?bikeNameFromFront=<%= dataBike[i].name%>&bikePriceFromFront=<%= dataBike[i].price%>&bikeImageFromFront=<%= dataBike[i].url%>" class="waves-effect waves-light btn blue-grey darken-4 itembutton">Buy</a>
+                                    <a href="/description?bikeNameFromFront=<%= dataBike[i].name%>" class="waves-effect waves-light btn blue-grey darken-1 itembutton">Description</a>
+                                 </div>
+                        </div>
+                               
                         </div>
                     </div>
 

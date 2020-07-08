@@ -2,7 +2,7 @@
 
 body{
     background-color: #ffffff;
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Roboto', sans-serif;
 } 
 
 /* ---------- Home page -------------- */
@@ -15,19 +15,7 @@ body{
   }
 
 
-.navbar{
-    padding:0px ;
-    color: #FFFFFF;
-    
-}
 
-.navbar:hover{
-    color: #FFFFFF;
-}
-
-.navbar:link{
-    text-decoration:none;
-}
 .logo{
     margin-left: 10px;
 }
@@ -52,18 +40,14 @@ body{
     width: 100px;
 }
 
-.basket-item {
-    background-color: #F8F8F8;
+.quantity{
+display :flex;
+flex-direction: row;
+width:80%;
+align-items: center;
 }
 
-.total-box {
-    font-weight: bold;
 
-}
-
-.btn-checkout {
-    font-weight: bold;
-}
 
 .no-article {
     font-size: italic;
@@ -71,4 +55,49 @@ body{
 }
 
 
+/* ----- description page ---------- */
 
+
+.card-img-top{
+    padding:15px;
+}
+
+.colproduit {
+display: flex;
+
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cardName{
+    margin-top: 0px;
+    margin-bottom: auto;  
+}
+
+
+.cardPrice{
+    margin-top: 10px;
+
+}
+
+
+.itembutton{
+    margin: 15px;
+    margin-bottom: 0px;
+
+}
+
+.iconShop{
+    margin-right: 150px;
+}
+
+.descrLateral{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

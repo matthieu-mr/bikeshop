@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var session = require("express-session");
+var mongoose = require('./models/connexion');
+
 
 var app = express();
 

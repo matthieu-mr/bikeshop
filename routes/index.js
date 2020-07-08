@@ -1,26 +1,37 @@
 var express = require('express');
 var router = express.Router();
 
-const stripe = require('stripe')('sk_test_dR33tXRXN7n4cCfrkxEZKBis00ginBDyGz');
+var bikesModel = require('../models/bikeModel')
 
-var dataBike = [
-  {name:"BIK045", url:"/images/bike-1.jpg", price:679},
-  {name:"ZOOK07", url:"/images/bike-2.jpg", price:999},
-  {name:"TITANS", url:"/images/bike-3.jpg", price:799},
-  {name:"CEWO", url:"/images/bike-4.jpg", price:1300},
-  {name:"AMIG039", url:"/images/bike-5.jpg", price:479},
-  {name:"LIK099", url:"/images/bike-6.jpg", price:869},
-]
+
+const stripe = require('stripe')('sk_test_WCe0e88VrvhrZdangkv1hI7c00QjPrsEFd');
+
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/',async function(req, res, next) {
+
+
+  var listBikeFromBdd = await bikesModel.find(
+ 
+ )
+
+ let nbProduit = 0 
 
   if(req.session.dataCardBike == undefined){
     req.session.dataCardBike = []
+  }else {
+
+    req.session.dataCardBike.forEach((element) => {
+      nbProduit = nbProduit + element.quantity
+    
+    console.log("boucle :",element.quantity)
+    });   
   }
   
-  res.render('index', {dataBike:dataBike});
+
+
+  res.render('index', {dataBike:listBikeFromBdd,  nbProduit:nbProduit});
 });
 
 router.get('/shop', async function(req, res, next) {
@@ -146,5 +157,28 @@ router.post('/update-shop', async function(req, res, next){
 router.get('/success', function(req, res, next){
   res.render('confirm');
 })
+
+
+router.get('/description',async function(req, res, next){
+
+  nameFront=req.query ; 
+
+
+
+
+  nameFromFront = "Cube Acid 240 Hybrid 400 Adolescents, actionteam (2020)"
+
+  var descBike= await bikesModel.find(
+    {name:nameFromFront}
+    )
+
+    console.log(descBike)
+    res.render('description', {descBike:descBike});
+})
+
+
+
+
+
 
 module.exports = router;

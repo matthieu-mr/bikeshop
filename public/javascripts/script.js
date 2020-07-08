@@ -1,4 +1,4 @@
-var stripe = Stripe('pk_test_huvfYfZy52M9DxyJ4gvMbR3i005P5qbajD');
+var stripe = Stripe('pk_test_pl3SWtFEhV77OUoDp1ccxQi700UaEXdZkc');
 
 document.getElementById('checkout').addEventListener("click", function(){
     stripe.redirectToCheckout({
