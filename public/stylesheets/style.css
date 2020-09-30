@@ -70,7 +70,8 @@ align-items: center;
 /* ----- description page ---------- */
 
 .title-desc{
-    margin-left: 15px;;
+    margin-left: 15px;
+    color:whitesmoke;
 }
 
 .headerdetails{
@@ -101,4 +102,13 @@ border-radius: 20px 0px 0px 20px;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+.title-text{
+padding-left: 15px;
+}
+  
+
+.description-text{
+    padding: 20px;
 }

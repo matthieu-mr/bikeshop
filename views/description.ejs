@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/materialize.css">
+        <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="/javascripts/materialize.js"></script>
+    
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    
     <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <script src="/javascripts/materialize.min.js"></script>
 
     <title>BikeShop - Description</title>
     </head>
@@ -22,43 +27,45 @@
             <!-- HEADER -->
             <div class="row">
 
-                <nav class=" header col-12 navbar navbar-light bg-dark">
-                    <a class="navbar" href="/">
-                    <img src="/images/bike-logo.svg" width="50" height="50" class="logo" alt="">
-                    The Bike Shop Experience
-                    </a>
-                </nav>
+
+                <nav>
+                    <div class="nav-wrapper  navbar-light bg-dark">
+                      <a href="#!" class="brand-logo">  <img src="/images/bike-logo.svg" width="50" height="50" class="logo" alt="">  The Bike Shop Experience</a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="/shop"><i class=" material-icons right iconShop large">shopping_cart</i><%= nbProduit %> article</a></li>
+                      </ul>
+                    </div>
+                  </nav>
 
             </div>  
+
+
         <div class="container-fluid">
 
             <!-- NAv bar -->
-            <nav>
-                <div class="nav-wrapper  bg-dark">
-                  <div class="col s12">
+     
+                  <div class="col s12 ">
                     <a href="/" >Shop</a>
                     <a href="#!">  >  <%=descBike[0].name %></a>
                   </div>
-                </div>
-              </nav>
-              <div class="carousel carousel-slider">
-                <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-                <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-                <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-                <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
-              </div>
+        
 
             <!-- Page Content  -->
-              <div class="container">
-                <div class="card">
+            <div class="container   ">
+                <div class="card bg-secondary  ">
                     <h3 class="title-desc"> <%= descBike[0].name %></h3>
-                    <div class="divider"> </div>
+                   
+                </div>
+            </div>
+
+              <div class="container  ">
+                <div class="card ">
 
                 <div class="headerdetails">
             
                     <div class="col-6 responsive-img">
                         
-                        <img class="card" src=<%= descBike[0].url%> >
+                        <img  src=<%= descBike[0].url%> >
                     </div>
                         
                     <div class="col-3 offset-3 "> 
@@ -79,22 +86,17 @@
               
             <div class="container">    
             <div class="card">
-                <h3> Description</h3>
-                <p class="flow-text"> <%=descBike[0].description %></p>
+                <h3 class="title-text"> Description :</h3>
+                <p class="description-text"> <%=descBike[0].description %></p>
             </div>
             </div>
 
-                     
-            
-
+                    
               </div>
-
-
 
               <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
               <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
           
          
     </body>
