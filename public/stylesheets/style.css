@@ -19,6 +19,18 @@ body{
 .logo{
     margin-left: 10px;
 }
+.cardAll{
+
+    display:flex;
+    align-items: stretch;
+    }
+    
+
+.cardHome{
+background-color: aqua;
+margin-left: 15px;
+
+}
 
 
 /* ----- Shop page ---------- */
