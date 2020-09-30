@@ -69,47 +69,36 @@ align-items: center;
 
 /* ----- description page ---------- */
 
-
-.card-img-top{
-    padding:15px;
+.title-desc{
+    margin-left: 15px;;
 }
 
-.colproduit {
-display: flex;
-
+.headerdetails{
+    display:flex;
+    flex-direction: row;
 }
 
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.cardName{
-    margin-top: 0px;
-    margin-bottom: auto;  
-}
-
-
-.cardPrice{
-    margin-top: 10px;
+.price-all{
+padding:15px;
+margin-top: 35px;
+border-color: #636e7a;
+border-left: solid 1px  #adbed3;
+border-bottom: solid 1px  #adbed3;
+border-top: solid 1px  #adbed3;
+border-radius: 20px 0px 0px 20px;
 
 }
 
-
-.itembutton{
-    margin: 15px;
-    margin-bottom: 0px;
-
+.stock{
+    font-size: x-large;
+    color:#636e7a;
 }
 
-.iconShop{
-    margin-right: 150px;
-}
 
-.descrLateral{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+
+.btn-buy{
+    width: 100%;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
